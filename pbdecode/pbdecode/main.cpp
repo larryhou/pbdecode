@@ -49,8 +49,7 @@ void decode(const char *input, char *output, size_t length, bool newline = true)
 
 void decode(const char *path)
 {
-    std::ifstream fs;
-    fs.open(path, std::ifstream::binary);
+    std::ifstream fs(path, std::ifstream::binary);
     fs.seekg(0, std::ios_base::end);
     auto length = static_cast<size_t>(fs.tellg());
     fs.seekg(0);
