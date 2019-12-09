@@ -43,7 +43,7 @@ void decode(const char *input, char *output, size_t length, bool newline = true)
     
     *wCursor = 0;
     std::cout << output;
-    if (newline) { std::cout << std::endl; }
+    if (newline) { std::cout << '\n'; }
     std::cout << std::flush;
 }
 
